@@ -12,13 +12,6 @@ var bio = {
     }
 };
 
-var contacts = {
-	"location" : "Syracuse, NY",
-	"email" : "stevencoop89@gmail.com",
-	"mobile" : "315-481-4801",
-	"github" : "http://github.com/ohthatsteve"
-};
-
 var work = {
 	"jobs" : [
 	{
@@ -31,7 +24,7 @@ var work = {
 		"dates" : "2011-2014",
 		"employer" : "Smooth Waves AV",
 		"location" : "Tampa, FL",
-		"title" : "Home Installations Assistant",
+		"title" : "Home Installations Technician",
 		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iste ratione sequi veritatis. Aperiam, inventore reprehenderit laudantium quidem ratione dolore perferendis dolorem. Fugiat, illum tempore nihil quam blanditiis cum ab!"
 		},{
 		"dates" : "2007-2011",
@@ -92,7 +85,6 @@ var education = {
 		}
 	]};
 
-
 var name = HTMLheaderName.replace("%data%",bio.name);
 var role = HTMLheaderRole.replace("%data%",bio.role);
 $("#header").prepend(role);
@@ -109,31 +101,31 @@ if(bio.skills){
 
 };
 
-if(contacts){
-	for(contact in contacts){
-		switch(contacts[contact]) {
-			case contacts.location:
-				var contact = HTMLlocation.replace("%data%", contacts[contact]);
+if(bio.contacts){
+	for(contact in bio.contacts){
+		switch(bio.contacts[contact]) {
+			case bio.contacts.location:
+				var contact = HTMLlocation.replace("%data%", bio.contacts[contact]);
 				$("#topContacts").append(contact);
 				$("#footerContacts").append(contact);
 				break;
-			case contacts.email:
-				var contact = HTMLemail.replace("%data%", contacts[contact]);
+			case bio.contacts.email:
+				var contact = HTMLemail.replace("%data%", bio.contacts[contact]);
 				$("#topContacts").append(contact);
 				$("#footerContacts").append(contact);
 				break;
-			case contacts.mobile:
-				var contact = HTMLmobile.replace("%data%", contacts[contact]);
+			case bio.contacts.mobile:
+				var contact = HTMLmobile.replace("%data%", bio.contacts[contact]);
 				$("#topContacts").append(contact);
 				$("#footerContacts").append(contact);
 				break;
-			case contacts.github:
-				var contact = HTMLgithub.replace("%data%", contacts[contact]);
+			case bio.contacts.github:
+				var contact = HTMLgithub.replace("%data%", bio.contacts[contact]);
 				$("#topContacts").append(contact);
 				$("#footerContacts").append(contact);
 				break;
 			default:
-				var contact = HTMLcontactGeneric.replace("%data%", contacts[contact]);
+				var contact = HTMLcontactGeneric.replace("%data%", bio.contacts[contact]);
 				$("#topContacts").append(contact);
 				$("#footerContacts").append(contact);
 		}

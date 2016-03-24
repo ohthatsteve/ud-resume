@@ -26,7 +26,6 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +33,6 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,14 +40,12 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4a4a4a;
   line-height: 17px;
 }
 
@@ -65,7 +61,6 @@ h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
   line-height: 16px;
   float: left;
 }
@@ -73,7 +68,6 @@ h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
   line-height: 16px;
   float: right;
 
@@ -81,12 +75,10 @@ h5 {
 
 p {
   font-size: 14px;
-  color: #333;
   line-height: 21px;
 }
 
 a {
-  color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -95,41 +87,16 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
 }
 
 .flex-box {
@@ -166,32 +133,6 @@ span {
 
 #lets-connect {
   text-align: center;
-}
-
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
 }
 
 #map {
