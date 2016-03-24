@@ -12,34 +12,34 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<p id="role">%data%</p><hr>';
+var HTMLheaderName = '<h1 id="name" class ="dark-blue">%data%</h1>';
+var HTMLheaderRole = '<p id="role" class = "light-blue">%data%</p><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item contact-item"><span class="contact-type">%contact%</span><span class="contact-data">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item contact-item"><span class="contact-type">mobile</span><span class="contact-data">%data%</span></li>';
-var HTMLemail = '<li class="flex-item contact-item"><span class="contact-type">email</span><span class="contact-data">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item contact-item"><span class="contact-type">twitter</span><span class="contact-data">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item contact-item"><span class="contact-type">github</span><span class="contact-data">%data%</span></li>';
-var HTMLblog = '<li class="flex-item contact-item"><span class="contact-type">blog</span><span class="contact-data">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item contact-item"><span class="contact-type">location</span><span class="contact-data">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item contact-item"><span class="contact-type dark-blue">%contact%</span><span class="link-blue">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item contact-item"><span class="contact-type dark-blue">mobile</span><span class="link-blue">%data%</span></li>';
+var HTMLemail = '<li class="flex-item contact-item"><span class="contact-type dark-blue">email</span><span class="link-blue">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item contact-item"><span class="contact-type dark-blue">twitter</span><span class="link-blue">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item contact-item"><span class="contact-type dark-blue">github</span><span class="link-blue">%data%</span></li>';
+var HTMLblog = '<li class="flex-item contact-item"><span class="contact-type dark-blue">blog</span><span class="link-blue">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item contact-item"><span class="contact-type dark-blue">location</span><span class="link-blue">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="skill">%data%</span></li>';
+var HTMLskillsStart = '<h3 id="skills-h3" class = "dark-blue">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
+var HTMLskills = '<li class="flex-item"><span class="link-blue">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
+var HTMLworkEmployer = '<a href="#" class = "link-blue">%data%';
 var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkDates = '<div class="date-text light-blue">%data%</div>';
+var HTMLworkLocation = '<div class="location-text light-blue">%data%</div>';
+var HTMLworkDescription = '<p class="green"><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectTitle = '<a href="#" class="link-blue">%data%</a>';
+var HTMLprojectDates = '<div class="date-text light-blue">%data%</div>';
+var HTMLprojectDescription = '<p class="green"><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';

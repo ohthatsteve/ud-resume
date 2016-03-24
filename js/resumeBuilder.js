@@ -1,5 +1,5 @@
 var bio = {
-	"name" : "Steve Cooper",
+	"name" : "Steven Cooper",
     "role" : "web developer",
     "welcomeMsg" : "Welcome to my resume",
     "bioPic" : "images/resume_picture.jpg",

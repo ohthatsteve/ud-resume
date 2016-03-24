@@ -21,14 +21,16 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
 
+  <!-- Load Bootstrap framework -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
 
   <!-- Load custom Google fonts -->
   <link href='https://fonts.googleapis.com/css?family=Poiret+One|Passion+One' rel='stylesheet' type='text/css'>
 
-  <!-- Load Bootstrap framework -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -58,18 +60,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
-  <div id="main" class = "container">
-
-    <!--
-    Everything from here to the <script> tag below is the skeleton of your
-    website. Your code will add information to each of the sections of the
-    resume below. You can pretty easily figure out what each section will
-    display by looking at the id or at what's written between the <h2> tags.
-    --><div class= "row">
-        <div id="header" class="center-content clear-fix col-xs-12">
-          <ul id="topContacts" class="flex-box"></ul>
-        </div>
+  <div id="main" class = "container light-background">
+    <div class= "row">
+      <div id="header" class="center-content clear-fix dark-background">
+        <ul id="topContacts" class="flex-box"></ul>
       </div>
+    </div>
 
 
     <div class = "container-fluid">
@@ -96,13 +92,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       </div>
     </div>
 
-    <div class = "container-fluid">
-      <div id="lets-connect">
-        <h2 class="center-text">Let's Connect</h2>
+      <div id="lets-connect" class = "row dark-background">
+        <h2 class="center-text dark-blue">Let's Connect</h2>
           <ul id="footerContacts" class="flex-box">
         </ul>
       </div>
-    </div>
   </div>
 
   <!--

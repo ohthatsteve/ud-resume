@@ -36,12 +36,17 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 30px;
   line-height: 22px;
 }
 
+h2,
+h3{
+  font-family: "Poiret One", sans-serif;
+}
+
 h4 {
-  font-size: 14px;
+  font-size: 21px;
   line-height: 17px;
 }
 
@@ -52,7 +57,10 @@ h5 {
   padding:10px 5%;
 
 }
-
+hr{
+  height: 0;
+  border-top: 1px solid #59b;
+}
 .date-text {
   font-size: 14px;
   line-height: 16px;
@@ -103,23 +111,12 @@ span {
   padding: 5px;
 }
 
-#main{
-  background-color: #456;
-}
-
-#header {
-  background-color: #234;
-  text-align: center;
-  color: #59b;
-}
-
 #name {
   font-size: 60px;
   line-height: 48px;
   letter-spacing: 5px;
   font-family: "Passion One", sans-serif;
-  color: #357;
-  text-shadow: 5px 5px 0 #135;
+  text-shadow: 2px 2px 0 #146;
 }
 
 #role {
@@ -127,10 +124,15 @@ span {
   font-family: "Poiret One", sans-serif;
 
 }
-
-.contact-data, .skill{
-  color: #ace;
+#name,
+#role{
+  text-align: center;
 }
+
+#top-contacts li{
+  text-align: left;
+}
+
 
 .welcome-message {
   font-style: italic;
@@ -151,12 +153,12 @@ span {
 
 #lets-connect {
   text-align: center;
+  margin-top: 25px;
 }
 
 #map {
   display: block;
   height: 100%;
-  
 }
 
 #mapDiv {
@@ -170,4 +172,30 @@ span {
   .biopic {
     display: block;
   }
+}
+
+
+/*********COLORS***********/
+.dark-blue{
+  color: #468;
+}
+
+.light-blue{
+  color: #ace;
+}
+
+.link-blue{
+  color: #4ac;
+}
+
+.green{
+  color: #aed;
+}
+
+.light-background{
+  background-color: #468;
+}
+
+.dark-background{
+  background-color: #234;
 }
