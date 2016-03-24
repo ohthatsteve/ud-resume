@@ -58,34 +58,50 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
-  <div id="main container">
+  <div id="main" class = "container">
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
-    -->
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+    --><div class= "row">
+        <div id="header" class="center-content clear-fix col-xs-12">
+          <ul id="topContacts" class="flex-box"></ul>
+        </div>
+      </div>
+
+
+    <div class = "container-fluid">
+      <div id="workExperience" class="row">
+        <h2>Work Experience</h2>
+      </div>
     </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="">
-      <h2>Work Experience</h2>
+
+    <div class = "container-fluid">
+      <div id="projects" class="row">
+        <h2>Projects</h2>
+      </div>
     </div>
-    <div id="projects">
-      <h2>Projects</h2>
+
+    <div class = "container-fluid">
+      <div id="education" class="row">
+        <h2>Education</h2>
+      </div>
     </div>
-    <div id="education" class="">
-      <h2>Education</h2>
+
+    <div class = "container-fluid">
+      <div id="mapDiv" class = "row">
+        <h2>Where I've Lived and Worked</h2>
+      </div>
     </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="">
-      <h2 class="center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
+
+    <div class = "container-fluid">
+      <div id="lets-connect">
+        <h2 class="center-text">Let's Connect</h2>
+          <ul id="footerContacts" class="flex-box">
+        </ul>
+      </div>
     </div>
   </div>
 

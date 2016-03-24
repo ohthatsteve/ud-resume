@@ -15,13 +15,13 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<p id="role">%data%</p><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="contact-type">%contact%</span><span class="contact-data">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="contact-type">mobile</span><span class="contact-data">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="contact-type">email</span><span class="contact-data">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="contact-type">twitter</span><span class="contact-data">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="contact-type">github</span><span class="contact-data">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="contact-type">blog</span><span class="contact-data">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="contact-type">location</span><span class="contact-data">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item contact-item"><span class="contact-type">%contact%</span><span class="contact-data">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item contact-item"><span class="contact-type">mobile</span><span class="contact-data">%data%</span></li>';
+var HTMLemail = '<li class="flex-item contact-item"><span class="contact-type">email</span><span class="contact-data">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item contact-item"><span class="contact-type">twitter</span><span class="contact-data">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item contact-item"><span class="contact-type">github</span><span class="contact-data">%data%</span></li>';
+var HTMLblog = '<li class="flex-item contact-item"><span class="contact-type">blog</span><span class="contact-data">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item contact-item"><span class="contact-type">location</span><span class="contact-data">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
@@ -56,7 +56,7 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
-var googleMap = '<div id="map"></div>';
+var googleMap = '<div id="map" class="col-xs-10 col-xs-offset-1"></div>';
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
