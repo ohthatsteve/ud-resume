@@ -24,27 +24,18 @@ h6 {
   padding: 0 5%;
 }
 
-h1 {
-  font-size: 40px;
-  line-height: 48px;
-  display: inline;
-}
-
 h2 {
-  font-weight: bold;
   font-size: 24px;
   line-height: 29px;
   padding: 10px;
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
   line-height: 22px;
 }
 
 h4 {
-  font-weight: bold;
   font-size: 14px;
   line-height: 17px;
 }
@@ -57,9 +48,7 @@ h5 {
 
 }
 
-
 .date-text {
-  font-style: italic;
   font-size: 14px;
   line-height: 16px;
   float: left;
@@ -84,21 +73,6 @@ a {
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  line-height: 28px;
-}
-
-#skills-h3 {
-  display: none;
-}
-
-
-/* TODO: Replace with image later */
-#header {
-}
-
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -116,19 +90,54 @@ ul {
   list-style-type: none;
 }
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
 img {
   padding: 10px;
 }
 
 span {
   padding: 5px;
+}
+
+#header {
+  background-color: #234;
+  text-align: center;
+  color: #59b;
+}
+
+#name {
+  font-size: 60px;
+  line-height: 48px;
+  letter-spacing: 5px;
+  font-family: "Passion One", sans-serif;
+  color: #357;
+  text-shadow: 5px 5px 0 #135;
+}
+
+#role {
+  font-size: 30px;
+  font-family: "Poiret One", sans-serif;
+
+}
+
+.contact-data, .skill{
+  color: #ace;
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+#skills-h3 {
+  display: none;
+}
+
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  display: none;
 }
 
 #lets-connect {
@@ -142,7 +151,7 @@ span {
 }
 
 #mapDiv {
-  height: 400px;
+  height: 600px;
   width: 100%;
   padding-bottom: 5%;
 }

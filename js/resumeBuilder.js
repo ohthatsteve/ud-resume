@@ -105,29 +105,29 @@ if(bio.contacts){
 	for(contact in bio.contacts){
 		switch(bio.contacts[contact]) {
 			case bio.contacts.location:
-				var contact = HTMLlocation.replace("%data%", bio.contacts[contact]);
-				$("#topContacts").append(contact);
-				$("#footerContacts").append(contact);
+				var formattedContact = HTMLlocation.replace("%data%", bio.contacts[contact]);
+				$("#topContacts").append(formattedContact);
+				$("#footerContacts").append(formattedContact);
 				break;
 			case bio.contacts.email:
-				var contact = HTMLemail.replace("%data%", bio.contacts[contact]);
-				$("#topContacts").append(contact);
-				$("#footerContacts").append(contact);
+				var formattedContact = HTMLemail.replace("%data%", bio.contacts[contact]);
+				$("#topContacts").append(formattedContact);
+				$("#footerContacts").append(formattedContact);
 				break;
 			case bio.contacts.mobile:
-				var contact = HTMLmobile.replace("%data%", bio.contacts[contact]);
-				$("#topContacts").append(contact);
-				$("#footerContacts").append(contact);
+				var formattedContact = HTMLmobile.replace("%data%", bio.contacts[contact]);
+				$("#topContacts").append(formattedContact);
+				$("#footerContacts").append(formattedContact);
 				break;
 			case bio.contacts.github:
-				var contact = HTMLgithub.replace("%data%", bio.contacts[contact]);
-				$("#topContacts").append(contact);
-				$("#footerContacts").append(contact);
+				var formattedContact = HTMLgithub.replace("%data%", bio.contacts[contact]);
+				$("#topContacts").append(formattedContact);
+				$("#footerContacts").append(formattedContact);
 				break;
 			default:
-				var contact = HTMLcontactGeneric.replace("%data%", bio.contacts[contact]);
-				$("#topContacts").append(contact);
-				$("#footerContacts").append(contact);
+				var formattedContact = HTMLcontactGeneric.replace("%data%", bio.contacts[contact]).replace("%contact%", contact);
+				$("#topContacts").append(formattedContact);
+				$("#footerContacts").append(formattedContact);
 		}
 	}
 }
@@ -152,10 +152,6 @@ function buildWork(){
 }
 
 buildWork();
-
-$(document).click(function(loc) { 
-	logClicks(loc.projectX,loc.projectY);
- });
 
 projects.display = function(){
 	for(project in projects.project){
