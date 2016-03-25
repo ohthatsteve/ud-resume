@@ -10,7 +10,7 @@ var bio = {
 		"mobile" : "315-481-4801",
 		"github" : "http://github.com/ohthatsteve"
     }
-};
+}
 
 var work = {
 	"jobs" : [
@@ -34,8 +34,7 @@ var work = {
 		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dicta perspiciatis exercitationem repudiandae. Ipsam quasi, sed corporis fuga doloribus. Quos sequi voluptas, labore doloremque obcaecati, modi a quo fugiat ipsam?"
 		}
 	]
-
-};
+}
 
 var projects = {
 	"project":[
@@ -51,7 +50,6 @@ var projects = {
 			"image" : "#"
 		}
 	]
-
 }
 
 var education = {
@@ -59,81 +57,84 @@ var education = {
 	{
 		"name"  : "Solvay High School",
 		"dates" : "2003-2007",
-       	"location" : "Solvay, Ny"
+       	"location" : "Solvay, NY",
+       	"degree" : "Regents Diploma"
 	}],
 	"online": [
 		{
-			"name" : "lynda.com",
-			"dates" : "2014-2015",
+			"school" : "lynda.com",
+			"dates" : "2015-2016",
 			"url" : "www.lynda.com/",
 			"title" : ["Javascript essential training"]
 		},{
-			"name" : "Code Academy",
+			"school" : "Code Academy",
 			"dates" : "2015-2016",
 			"url" : "https://www.codecademy.com/",
 			"title" : ["HTML & CSS",
-						"JavaScript",
-						"jQuery",
-						"PHP",
-						"Learn SQL",
-						"Learn AngularJS"]
+						" JavaScript",
+						" jQuery",
+						" PHP",
+						" Learn SQL",
+						" Learn AngularJS"]
 		},{
-			"name" : "Udacity",
+			"school" : "Udacity",
 			"dates" : "2016-current",
 			"url" : "https://www.udacity.com/",
-			"title" : "[Front-End Web Developer Nanodegree (in progress)]"
+			"title" : ["Front-End Web Developer Nanodegree (in progress)"]
 		}
-	]};
+	]}
 
-var name = HTMLheaderName.replace("%data%",bio.name);
-var role = HTMLheaderRole.replace("%data%",bio.role);
-$("#header").prepend(role);
-$("#header").prepend(name);
+bio.display = function(){
+	var name = HTMLheaderName.replace("%data%",bio.name);
+	var role = HTMLheaderRole.replace("%data%",bio.role);
+	$("#header").prepend(role);
+	$("#header").prepend(name);
 
-if(bio.skills){
-	$("#header").append(HTMLskillsStart);
-	var count = 0;
-	while(count<bio.skills.length){
-		var skill = HTMLskills.replace("%data%", bio.skills[count]);
-		$("#skills").append(skill);
-		count++;
-	};
+	if(bio.skills){
+		$("#header").append(HTMLskillsStart);
+		var count = 0;
+		while(count<bio.skills.length){
+			var skill = HTMLskills.replace("%data%", bio.skills[count]);
+			$("#skills").append(skill);
+			count++;
+		}
+	}
 
-};
-
-if(bio.contacts){
-	for(contact in bio.contacts){
-		switch(bio.contacts[contact]) {
-			case bio.contacts.location:
-				var formattedContact = HTMLlocation.replace("%data%", bio.contacts[contact]);
-				$("#topContacts").append(formattedContact);
-				$("#footerContacts").append(formattedContact);
-				break;
-			case bio.contacts.email:
-				var formattedContact = HTMLemail.replace("%data%", bio.contacts[contact]);
-				$("#topContacts").append(formattedContact);
-				$("#footerContacts").append(formattedContact);
-				break;
-			case bio.contacts.mobile:
-				var formattedContact = HTMLmobile.replace("%data%", bio.contacts[contact]);
-				$("#topContacts").append(formattedContact);
-				$("#footerContacts").append(formattedContact);
-				break;
-			case bio.contacts.github:
-				var formattedContact = HTMLgithub.replace("%data%", bio.contacts[contact]);
-				$("#topContacts").append(formattedContact);
-				$("#footerContacts").append(formattedContact);
-				break;
-			default:
-				var formattedContact = HTMLcontactGeneric.replace("%data%", bio.contacts[contact]).replace("%contact%", contact);
-				$("#topContacts").append(formattedContact);
-				$("#footerContacts").append(formattedContact);
+	if(bio.contacts){
+		for(contact in bio.contacts){
+			switch(bio.contacts[contact]) {
+				case bio.contacts.location:
+					var formattedContact = HTMLlocation.replace("%data%", bio.contacts[contact]);
+					$("#topContacts").append(formattedContact);
+					$("#footerContacts").append(formattedContact);
+					break;
+				case bio.contacts.email:
+					var formattedContact = HTMLemail.replace("%data%", bio.contacts[contact]);
+					$("#topContacts").append(formattedContact);
+					$("#footerContacts").append(formattedContact);
+					break;
+				case bio.contacts.mobile:
+					var formattedContact = HTMLmobile.replace("%data%", bio.contacts[contact]);
+					$("#topContacts").append(formattedContact);
+					$("#footerContacts").append(formattedContact);
+					break;
+				case bio.contacts.github:
+					var formattedContact = HTMLgithub.replace("%data%", bio.contacts[contact]);
+					$("#topContacts").append(formattedContact);
+					$("#footerContacts").append(formattedContact);
+					break;
+				default:
+					var formattedContact = HTMLcontactGeneric.replace("%data%", bio.contacts[contact]).replace("%contact%", contact);
+					$("#topContacts").append(formattedContact);
+					$("#footerContacts").append(formattedContact);
+			}
 		}
 	}
 }
-function buildWork(){
+
+work.display = function(){
 	if(work){
-		$("#workExperience").append(HTMLworkStart);
+		$("#work").append(HTMLworkStart);
 		for(job in work.jobs){
 			if (work.jobs.hasOwnProperty(job)){
 				var dates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
@@ -142,16 +143,12 @@ function buildWork(){
 				var title = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 				var description = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 				var formattedTitle = employer + title;
-				$(".work-entry:last").append(formattedTitle);
-				$(".work-entry:last").append(dates);
-				$(".work-entry:last").append(wLocation);
-				$(".work-entry:last").append(description);
+				$(".work-entry:last").append(formattedTitle, dates, wLocation, description);
+				
 			}
 		}
 	}
 }
-
-buildWork();
 
 projects.display = function(){
 	for(project in projects.project){
@@ -161,17 +158,59 @@ projects.display = function(){
 				var title = HTMLprojectTitle.replace("%data%",projects.project[project].title);
 				var dates = HTMLprojectDates.replace("%data%",projects.project[project].dates);
 				var description = HTMLprojectDescription.replace("%data%",projects.project[project].description);
-
-				$(".project-entry:last").append(title);
-				$(".project-entry:last").append(dates);
-				$(".project-entry:last").append(description);
-
-
-
-
+				$(".project-entry:last").append(title, dates, description);
 			}
 	}
 }
 
+education.schools.display = function (){
+	for(school in education.schools){
+		if (education.schools.hasOwnProperty(school))
+		{
+			$("#education").append(HTMLschoolStart);
+			var schoolName = HTMLschoolName.replace("%data%",education.schools[school].name);
+			var schoolDegree = HTMLschoolDegree.replace("%data%",education.schools[school].degree);
+			var schoolDate = HTMLschoolDates.replace("%data%",education.schools[school].dates);
+			var schoolLocation = HTMLschoolLocation.replace("%data%",education.schools[school].location);
+			var schoolMajor = HTMLschoolMajor.replace("%data%","\n");
+			$(".education-entry:last").append(schoolName, schoolDegree, schoolDate, schoolLocation, schoolMajor);
+		}
+	}
+	$('.education-entry:last').remove();
+}
+education.online.display = function() {
+	if(education.online){
+		$("#education").append(HTMLonlineClasses);
+		for(online in education.online){
+			if (education.online.hasOwnProperty(online))
+			{
+				var onlineSchool = HTMLonlineSchool.replace("%data%",education.online[online].school);
+				var onlineDates = HTMLonlineDates.replace("%data%",education.online[online].dates);
+				var onlineTitle = HTMLonlineTitle.replace("%data%",education.online[online].title);
+				var onlineUrl = HTMLonlineURL.replace("%data%",education.online[online].url);
+			$("#education").append(HTMLschoolStart);
+			$(".education-entry:last").append(onlineTitle,onlineSchool,onlineDates,onlineUrl);
+
+			}
+		}
+	}
+		$('.education-entry:last').remove();
+}
+
+
+bio.display();
+work.display();
 projects.display();
-$("#mapDiv").append(googleMap);
+education.schools.display();
+education.online.display();
+$("#location").append(googleMap);
+
+$(".nav-item").click(function(){
+	var active = null;
+	active = $('#content-container').find('.active');
+	if (active != null && active.attr('id')!= $(this).attr('id').replace('-nav',"")){
+		$(active).toggleClass('active').toggleClass('inactive');
+	}
+	var selection = $(this).attr('id').replace('-nav',"");
+	$('#'+selection).toggleClass('active').toggleClass('inactive');
+})
