@@ -8,7 +8,7 @@ var bio = {
     	"location" : "Syracuse, NY",
 		"email" : "stevencoop89@gmail.com",
 		"mobile" : "315-481-4801",
-		"github" : "http://github.com/ohthatsteve"
+		"github" : "github.com/ohthatsteve"
     }
 }
 
@@ -144,7 +144,6 @@ work.display = function(){
 				var description = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 				var formattedTitle = employer + title;
 				$(".work-entry:last").append(formattedTitle, dates, wLocation, description);
-				
 			}
 		}
 	}
@@ -164,6 +163,7 @@ projects.display = function(){
 }
 
 education.schools.display = function (){
+	$("#education").append(HTMLschoolHeader);
 	for(school in education.schools){
 		if (education.schools.hasOwnProperty(school))
 		{
@@ -172,8 +172,8 @@ education.schools.display = function (){
 			var schoolDegree = HTMLschoolDegree.replace("%data%",education.schools[school].degree);
 			var schoolDate = HTMLschoolDates.replace("%data%",education.schools[school].dates);
 			var schoolLocation = HTMLschoolLocation.replace("%data%",education.schools[school].location);
-			var schoolMajor = HTMLschoolMajor.replace("%data%","\n");
-			$(".education-entry:last").append(schoolName, schoolDegree, schoolDate, schoolLocation, schoolMajor);
+			var schoolMajor = HTMLschoolMajor.replace("%data%","");
+			$(".education-entry:last").append(schoolName + schoolMajor + schoolDegree, schoolDate, schoolLocation);
 		}
 	}
 	$('.education-entry:last').remove();
@@ -189,7 +189,7 @@ education.online.display = function() {
 				var onlineTitle = HTMLonlineTitle.replace("%data%",education.online[online].title);
 				var onlineUrl = HTMLonlineURL.replace("%data%",education.online[online].url);
 			$("#education").append(HTMLschoolStart);
-			$(".education-entry:last").append(onlineTitle,onlineSchool,onlineDates,onlineUrl);
+			$(".education-entry:last").append(onlineTitle + onlineSchool,onlineDates,onlineUrl);
 
 			}
 		}
@@ -206,11 +206,14 @@ education.online.display();
 $("#location").append(googleMap);
 
 $(".nav-item").click(function(){
-	var active = null;
-	active = $('#content-container').find('.active');
+	var active,
+		myElement,
+		selection;
+	active = null;
+	active = $('#nav').find('.active');
 	if (active != null && active.attr('id')!= $(this).attr('id').replace('-nav',"")){
 		$(active).toggleClass('active').toggleClass('inactive');
 	}
-	var selection = $(this).attr('id').replace('-nav',"");
+	selection = $(this).attr('id').replace('-nav',"");
 	$('#'+selection).toggleClass('active').toggleClass('inactive');
 })

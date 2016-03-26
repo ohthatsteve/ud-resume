@@ -64,6 +64,7 @@ hr{
   font-size: 14px;
   line-height: 16px;
   float: left;
+  color: #ace;
 }
 
 .location-text {
@@ -71,19 +72,24 @@ hr{
   font-size: 14px;
   line-height: 16px;
   float: right;
+  color: #ace;
 
 }
 
 p {
   font-size: 14px;
   line-height: 21px;
+  color: #aed;
 }
 
 a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+  color: #4ac;
 }
+
+
 
 .flex-box {
   display: -webkit-flex;
@@ -114,8 +120,8 @@ img {
   padding: 10px;
 }
 
-span {
-  padding: 5px;
+span{
+  max-width: 45%;
 }
 
 .inactive{
@@ -146,8 +152,12 @@ span {
   text-align: center;
 }
 
-#top-contacts li{
-  text-align: left;
+#top-contacts{
+  width:80%;
+  display: block;
+}
+.contact-item{
+  display: block;
 }
 
 .welcome-message {
@@ -167,6 +177,11 @@ span {
   display: none;
 }
 
+.content-container{
+  text-align: left;
+  width: 100%;
+}
+
 #lets-connect {
   text-align: center;
 }
@@ -174,6 +189,7 @@ span {
 #map {
   display: block;
   height: 100%;
+  margin: 0 5%;
 }
 
 #location {
@@ -182,7 +198,7 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
+@media screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
@@ -191,20 +207,16 @@ span {
 
 
 /*********COLORS***********/
-.dark-blue{
-  color: #468;
-}
-
-.light-blue{
+.contact-data,
+.skill,
+.location-text{
   color: #ace;
 }
 
-.link-blue{
-  color: #4ac;
-}
-
-.green{
-  color: #aed;
+#name,
+#skills-h3,
+.contact-type{
+  color:#468;
 }
 
 .light-background{

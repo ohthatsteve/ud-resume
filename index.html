@@ -68,39 +68,47 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
 
     <nav id="nav" class="row">
+
         <div class = "nav-item flex-box" id="work-nav">
           <h2>Work Experience</h2>
         </div>
+
         <hr>
+
+        <div class="container content-container" id="work-content">
+          <div id="work" class="row inactive appear"></div>
+        </div>
+
         <div class = "nav-item flex-box" id="projects-nav">
           <h2>Projects</h2>
         </div>
+
         <hr>
+
+        <div class="container content-container" id="projects-content">
+          <div id="projects" class="row inactive appear"></div>
+        </div>
+
         <div class = "nav-item flex-box" id="education-nav">
           <h2>Education</h2>
         </div>
+
         <hr>
+
+        <div class="container content-container" id="education-content">
+          <div id="education" class="row inactive appear"></div>
+        </div>
+
         <div class = "nav-item flex-box" id="location-nav">
           <h2>Locations</h2>
         </div>
+
+        <div class="container content-container" id="location-content">
+          <div id="location" class="row inactive appear"></div>
+        </div>
+
     </nav>
 
-    <div class="container" id="content-container">
-      <div id="work" class="row inactive appear">
-      </div>
-      
-      <div id="projects" class="row inactive appear">
-      </div>
-      
-      <div id="education" class="row inactive appear">
-      </div>
-
-      <div class = "container">
-            <div id="location" class = "row inactive appear">
-            </div>
-      </div>
-
-    </div>
 
       <div id="lets-connect" class = "row dark-background">
         <h2 class="center-text dark-blue">Let's Connect</h2>
@@ -160,7 +168,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('lets-connect').style.display = 'none';
     }
     if(document.getElementById('map') === null) {
-      document.getElementById('location').style.display = 'none';
+      document.getElementById('locations').style.display = 'none';
     }
   </script>
 </body>
