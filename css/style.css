@@ -189,22 +189,15 @@ span{
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
 }
 
 #location {
   height: 400px;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 5%;
 }
-
-@media screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
-}
-
 
 /*********COLORS***********/
 .contact-data,
@@ -215,6 +208,7 @@ span{
 
 #name,
 #skills-h3,
+#lets-connect,
 .contact-type{
   color:#468;
 }
@@ -225,4 +219,20 @@ span{
 
 .dark-background{
   background-color: #234;
+}
+
+
+/********MEDIAQUERIES*************/
+
+@media screen and (min-width: 481px){
+  .inactive{
+    display: inherit;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
 }

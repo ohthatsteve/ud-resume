@@ -9,82 +9,8 @@ var bio = {
 		"email" : "stevencoop89@gmail.com",
 		"mobile" : "315-481-4801",
 		"github" : "github.com/ohthatsteve"
-    }
-}
-
-var work = {
-	"jobs" : [
-	{
-		"dates" : "2014-current",
-		"employer" : "Local Food Concept",
-		"location" : "Syracuse, NY",
-		"title" : "Cashier",
-		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat alias cumque ad laudantium, voluptatem at veniam voluptatibus, culpa ullam mollitia corporis explicabo! Neque iusto quam atque, sunt quia id ullam!"
-	},{
-		"dates" : "2011-2014",
-		"employer" : "Smooth Waves AV",
-		"location" : "Tampa, FL",
-		"title" : "Home Installations Technician",
-		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iste ratione sequi veritatis. Aperiam, inventore reprehenderit laudantium quidem ratione dolore perferendis dolorem. Fugiat, illum tempore nihil quam blanditiis cum ab!"
-		},{
-		"dates" : "2007-2011",
-		"employer" : "Ford and Bryant LLC",
-		"location" : "Liverpool, NY",
-		"title" : "Cashier",
-		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dicta perspiciatis exercitationem repudiandae. Ipsam quasi, sed corporis fuga doloribus. Quos sequi voluptas, labore doloremque obcaecati, modi a quo fugiat ipsam?"
-		}
-	]
-}
-
-var projects = {
-	"project":[
-		{
-			"title" : "Portfolio",
-			"dates" : "February 2016-current",
-			"description" : "Udacity portfolio project",
-			"image" : "#"
-		},{
-			"title" : "Galaxy Index",
-			"dates" : "November 2015-current",
-			"description" : "View information about various galaxies",
-			"image" : "#"
-		}
-	]
-}
-
-var education = {
-	"schools":[
-	{
-		"name"  : "Solvay High School",
-		"dates" : "2003-2007",
-       	"location" : "Solvay, NY",
-       	"degree" : "Regents Diploma"
-	}],
-	"online": [
-		{
-			"school" : "lynda.com",
-			"dates" : "2015-2016",
-			"url" : "www.lynda.com/",
-			"title" : ["Javascript essential training"]
-		},{
-			"school" : "Code Academy",
-			"dates" : "2015-2016",
-			"url" : "https://www.codecademy.com/",
-			"title" : ["HTML & CSS",
-						" JavaScript",
-						" jQuery",
-						" PHP",
-						" Learn SQL",
-						" Learn AngularJS"]
-		},{
-			"school" : "Udacity",
-			"dates" : "2016-current",
-			"url" : "https://www.udacity.com/",
-			"title" : ["Front-End Web Developer Nanodegree (in progress)"]
-		}
-	]}
-
-bio.display = function(){
+    },
+    "display" : function(){
 	var name = HTMLheaderName.replace("%data%",bio.name);
 	var role = HTMLheaderRole.replace("%data%",bio.role);
 	$("#header").prepend(role);
@@ -131,8 +57,32 @@ bio.display = function(){
 		}
 	}
 }
+}
 
-work.display = function(){
+var work = {
+	"jobs" : [
+	{
+		"dates" : "2014-current",
+		"employer" : "Local Food Concept",
+		"location" : "Syracuse, NY",
+		"title" : "Cashier",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat alias cumque ad laudantium, voluptatem at veniam voluptatibus, culpa ullam mollitia corporis explicabo! Neque iusto quam atque, sunt quia id ullam!"
+	},{
+		"dates" : "2011-2014",
+		"employer" : "Smooth Waves AV",
+		"location" : "Tampa, FL",
+		"title" : "Home Installations Technician",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iste ratione sequi veritatis. Aperiam, inventore reprehenderit laudantium quidem ratione dolore perferendis dolorem. Fugiat, illum tempore nihil quam blanditiis cum ab!"
+		},{
+		"dates" : "2007-2011",
+		"employer" : "Ford and Bryant LLC",
+		"location" : "Liverpool, NY",
+		"title" : "Cashier",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dicta perspiciatis exercitationem repudiandae. Ipsam quasi, sed corporis fuga doloribus. Quos sequi voluptas, labore doloremque obcaecati, modi a quo fugiat ipsam?"
+		}
+	],
+
+	"display" : function(){
 	if(work){
 		$("#work").append(HTMLworkStart);
 		for(job in work.jobs){
@@ -148,8 +98,23 @@ work.display = function(){
 		}
 	}
 }
+}
 
-projects.display = function(){
+var projects = {
+	"project":[
+		{
+			"title" : "Portfolio",
+			"dates" : "February 2016-current",
+			"description" : "Udacity portfolio project",
+			"image" : "#"
+		},{
+			"title" : "Galaxy Index",
+			"dates" : "November 2015-current",
+			"description" : "View information about various galaxies",
+			"image" : "#"
+		}
+	],
+	"display" : function(){
 	for(project in projects.project){
 			if (projects.project.hasOwnProperty(project))
 			{
@@ -161,8 +126,40 @@ projects.display = function(){
 			}
 	}
 }
+}
 
-education.schools.display = function (){
+var education = {
+	"schools":[
+	{
+		"name"  : "Solvay High School",
+		"dates" : "2003-2007",
+       	"location" : "Solvay, NY",
+       	"degree" : "Regents Diploma"
+	}],
+	"onlineCourses": [
+		{
+			"school" : "lynda.com",
+			"dates" : "2015-2016",
+			"url" : "www.lynda.com/",
+			"title" : ["Javascript essential training"]
+		},{
+			"school" : "Code Academy",
+			"dates" : "2015-2016",
+			"url" : "https://www.codecademy.com/",
+			"title" : ["HTML & CSS",
+						" JavaScript",
+						" jQuery",
+						" PHP",
+						" Learn SQL",
+						" Learn AngularJS"]
+		},{
+			"school" : "Udacity",
+			"dates" : "2016-current",
+			"url" : "https://www.udacity.com/",
+			"title" : ["Front-End Web Developer Nanodegree (in progress)"]
+		}
+	],
+	"display" : function (){
 	$("#education").append(HTMLschoolHeader);
 	for(school in education.schools){
 		if (education.schools.hasOwnProperty(school))
@@ -176,36 +173,38 @@ education.schools.display = function (){
 			$(".education-entry:last").append(schoolName + schoolMajor + schoolDegree, schoolDate, schoolLocation);
 		}
 	}
-	$('.education-entry:last').remove();
-}
-education.online.display = function() {
-	if(education.online){
+
+	if(education.onlineCourses){
 		$("#education").append(HTMLonlineClasses);
-		for(online in education.online){
-			if (education.online.hasOwnProperty(online))
+		for(course in education.onlineCourses){
+			if (education.onlineCourses.hasOwnProperty(course))
 			{
-				var onlineSchool = HTMLonlineSchool.replace("%data%",education.online[online].school);
-				var onlineDates = HTMLonlineDates.replace("%data%",education.online[online].dates);
-				var onlineTitle = HTMLonlineTitle.replace("%data%",education.online[online].title);
-				var onlineUrl = HTMLonlineURL.replace("%data%",education.online[online].url);
+				var onlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[course].school);
+				var onlineDates = HTMLonlineDates.replace("%data%",education.onlineCourses[course].dates);
+				var onlineTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
+				var onlineUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[course].url);
 			$("#education").append(HTMLschoolStart);
 			$(".education-entry:last").append(onlineTitle + onlineSchool,onlineDates,onlineUrl);
 
 			}
 		}
 	}
-		$('.education-entry:last').remove();
-}
 
+
+}
+}
 
 bio.display();
 work.display();
 projects.display();
-education.schools.display();
-education.online.display();
+education.display();
 $("#location").append(googleMap);
 
 $(".nav-item").click(function(){
+	var mq = window.matchMedia("(max-width: 480px)");
+
+	if(mq.matches){
+
 	var active,
 		myElement,
 		selection;
@@ -216,4 +215,5 @@ $(".nav-item").click(function(){
 	}
 	selection = $(this).attr('id').replace('-nav',"");
 	$('#'+selection).toggleClass('active').toggleClass('inactive');
+}
 })
