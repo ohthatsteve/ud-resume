@@ -27,6 +27,7 @@ h6,{
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  padding-bottom: 20px;
 }
 
 h2 {
@@ -40,13 +41,15 @@ h3 {
 }
 
 h2,
-h3{
+h3,
+h4{
   font-family: "Poiret One", sans-serif;
 }
 
 h4 {
-  font-size: 21px;
-  line-height: 17px;
+  font-size: 25px;
+  line-height: 20px;
+  padding-top: 10px;
 }
 
 h2,
