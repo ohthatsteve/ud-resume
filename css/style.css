@@ -112,11 +112,7 @@ ul {
 }
 
 #nav{
-  width: 90%;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-
 }
 
 img {
@@ -137,6 +133,7 @@ span{
   float: left;
   padding-bottom: 20px;
 }
+
 #name {
   font-size: 60px;
   line-height: 48px;
@@ -153,14 +150,6 @@ span{
 #name,
 #role{
   text-align: center;
-}
-
-#top-contacts{
-  width:80%;
-  display: block;
-}
-.contact-item{
-  display: block;
 }
 
 .welcome-message {
@@ -237,5 +226,11 @@ span{
   #skills-h3,
   .biopic {
     display: block;
+  }
+
+  .skill{
+    width: 100%;
+    display: block;
+    padding: 5px;
   }
 }

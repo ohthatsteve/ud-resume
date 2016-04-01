@@ -14,7 +14,7 @@ var bio = {
 		var name = HTMLheaderName.replace("%data%",bio.name);
 		var role = HTMLheaderRole.replace("%data%",bio.role);
 		var bioPic = HTMLbioPic.replace("%data%",bio.bioPic);
-		$("#header").prepend(bioPic);
+		$("#header").append(bioPic);
 		$("#header").prepend(role);
 		$("#header").prepend(name);
 
@@ -34,28 +34,28 @@ var bio = {
 				switch(bio.contacts[contact]) {
 					case bio.contacts.location:
 						var formattedContact = HTMLlocation.replace("%data%", bio.contacts[contact]);
-						$("#topContacts").append(formattedContact);
-						$("#footerContacts").append(formattedContact);
+						$("#top-contacts").append(formattedContact);
+						$("#footer-contacts").append(formattedContact);
 						break;
 					case bio.contacts.email:
 						var formattedContact = HTMLemail.replace("%data%", bio.contacts[contact]);
-						$("#topContacts").append(formattedContact);
-						$("#footerContacts").append(formattedContact);
+						$("#top-contacts").append(formattedContact);
+						$("#footer-contacts").append(formattedContact);
 						break;
 					case bio.contacts.mobile:
 						var formattedContact = HTMLmobile.replace("%data%", bio.contacts[contact]);
-						$("#topContacts").append(formattedContact);
-						$("#footerContacts").append(formattedContact);
+						$("#top-contacts").append(formattedContact);
+						$("#footer-contacts").append(formattedContact);
 						break;
 					case bio.contacts.github:
 						var formattedContact = HTMLgithub.replace("%data%", bio.contacts[contact]);
-						$("#topContacts").append(formattedContact);
-						$("#footerContacts").append(formattedContact);
+						$("#top-contacts").append(formattedContact);
+						$("#footer-contacts").append(formattedContact);
 						break;
 					default:
 						var formattedContact = HTMLcontactGeneric.replace("%data%", bio.contacts[contact]).replace("%contact%", contact);
-						$("#topContacts").append(formattedContact);
-						$("#footerContacts").append(formattedContact);
+						$("#top-contacts").append(formattedContact);
+						$("#footer-contacts").append(formattedContact);
 				}
 			}
 		}

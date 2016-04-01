@@ -15,13 +15,13 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name" class ="">%data%</h1>';
 var HTMLheaderRole = '<p id="role">%data%</p><hr>';
 
-var HTMLcontactGeneric = '<li class="contact-item"><span class="contact-type ">%contact%</span><span class="contact-data">%data%</span></li>';
-var HTMLmobile = '<li class="contact-item"><span class="contact-type ">mobile: </span><span class="contact-data">%data%</span></li>';
-var HTMLemail = '<li class="contact-item"><span class="contact-type ">email: </span><span class="contact-data">%data%</span></li>';
-var HTMLtwitter = '<li class="contact-item"><span class="contact-type ">twitter: </span><span class="contact-data">%data%</span></li>';
-var HTMLgithub = '<li class="contact-item"><span class="contact-type ">github: </span><span class="contact-data">%data%</span></li>';
-var HTMLblog = '<li class="contact-item"><span class="contact-type ">blog: </span><span class="contact-data">%data%</span></li>';
-var HTMLlocation = '<li class="contact-item"><span class="contact-type ">location: </span><span class="contact-data">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="contact-item flex-item"><span class="contact-type">%contact%</span><span class="contact-data">%data%</span></li>';
+var HTMLmobile = '<li class="contact-item flex-item"><span class="contact-type">mobile: </span><span class="contact-data">%data%</span></li>';
+var HTMLemail = '<li class="contact-item flex-item"><span class="contact-type">email: </span><span class="contact-data">%data%</span></li>';
+var HTMLtwitter = '<li class="contact-item flex-item"><span class="contact-type">twitter: </span><span class="contact-data">%data%</span></li>';
+var HTMLgithub = '<li class="contact-item flex-item"><span class="contact-type">github: </span><span class="contact-data">%data%</span></li>';
+var HTMLblog = '<li class="contact-item flex-item"><span class="contact-type">blog: </span><span class="contact-data">%data%</span></li>';
+var HTMLlocation = '<li class="contact-item flex-item"><span class="contact-type">location: </span><span class="contact-data">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
