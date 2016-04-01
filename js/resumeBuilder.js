@@ -3,7 +3,10 @@ var bio = {
     "role" : "web developer",
     "welcomeMessage" : "Welcome to my resume",
     "bioPic" : "images/bio-pic.jpg",
-    "skills" : ["HTML", "CSS", "other things"],
+    "skills" : ["HTML",
+    			"CSS",
+    			"Javascript",
+    			"Other things"],
     "contacts" : {
     	"location" : "Syracuse, NY",
 		"email" : "stevencoop89@gmail.com",
@@ -66,22 +69,22 @@ var work = {
 	"jobs" : [
 	{
 		"dates" : "2014-current",
-		"employer" : "Local Food Concept",
+		"employer" : "Middle Ages Bar and Grill",
 		"location" : "Syracuse, NY",
-		"title" : "Cashier",
-		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat alias cumque ad laudantium, voluptatem at veniam voluptatibus, culpa ullam mollitia corporis explicabo! Neque iusto quam atque, sunt quia id ullam!"
+		"title" : "Sales Associate, Porter",
+		"description" : "Maintain a positive atmosphere while interacting with international travelers. Keep six retail locations well stocked throughout the day."
 	},{
 		"dates" : "2011-2014",
 		"employer" : "Smooth Waves AV",
 		"location" : "Tampa, FL",
 		"title" : "Home Installations Technician",
-		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iste ratione sequi veritatis. Aperiam, inventore reprehenderit laudantium quidem ratione dolore perferendis dolorem. Fugiat, illum tempore nihil quam blanditiis cum ab!"
+		"description" : "Work on a team to install home entertainment systems, security systems, and various network devices both residential and commercial"
 		},{
 		"dates" : "2007-2011",
 		"employer" : "Ford and Bryant LLC",
 		"location" : "Liverpool, NY",
-		"title" : "Cashier",
-		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dicta perspiciatis exercitationem repudiandae. Ipsam quasi, sed corporis fuga doloribus. Quos sequi voluptas, labore doloremque obcaecati, modi a quo fugiat ipsam?"
+		"title" : "Assistant manager",
+		"description" : "Aid in selection and training of new hires, order merchanise for store, keep track of inventory"
 		}
 	],
 

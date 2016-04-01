@@ -174,6 +174,10 @@ span{
   width: 100%;
 }
 
+.project-image{
+  width: 100%:;
+}
+
 #map {
   display: block;
   height: 100%;
@@ -185,6 +189,10 @@ span{
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 5%;
+}
+
+.contact-item{
+  padding-bottom: 5px;
 }
 
 #lets-connect {
@@ -219,6 +227,10 @@ span{
 @media screen and (min-width: 481px){
   .inactive{
     display: inherit;
+  }
+
+  .project-image{
+    height: 250px;
   }
 }
 
