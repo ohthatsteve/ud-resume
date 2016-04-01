@@ -57,7 +57,7 @@ var HTMLonlineDates = '<div class="date-text ">%data%</div><br>';
 var HTMLonlineURL = '<a href="#">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
-var googleMap = '<div id="map" class="col-xs-10 col-xs-offset-1"></div>';
+var googleMap = '<div id="map"></div>';
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.

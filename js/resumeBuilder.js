@@ -2,7 +2,7 @@ var bio = {
 	"name" : "Steven Cooper",
     "role" : "web developer",
     "welcomeMessage" : "Welcome to my resume",
-    "bioPic" : "images/resume_picture.jpg",
+    "bioPic" : "images/bio-pic.jpg",
     "skills" : ["HTML", "CSS", "other things"],
     "contacts" : {
     	"location" : "Syracuse, NY",
@@ -13,8 +13,11 @@ var bio = {
     "display" : function(){
 		var name = HTMLheaderName.replace("%data%",bio.name);
 		var role = HTMLheaderRole.replace("%data%",bio.role);
+		var bioPic = HTMLbioPic.replace("%data%",bio.bioPic);
+		$("#header").prepend(bioPic);
 		$("#header").prepend(role);
 		$("#header").prepend(name);
+
 
 		if(bio.skills){
 			$("#header").append(HTMLskillsStart);
