@@ -22,7 +22,6 @@ var bio = {
 		$("#header").prepend(role);
 		$("#header").prepend(name);
 
-
 		if(bio.skills){
 			$("#header").append(HTMLskillsStart);
 			var count = 0;
@@ -79,13 +78,13 @@ var work = {
 		"employer" : "Smooth Waves AV",
 		"location" : "Tampa, FL",
 		"title" : "Home Installations Technician",
-		"description" : "Work on a team to install home entertainment systems, security systems, and various network devices both residential and commercial"
+		"description" : "Work on a team to install home entertainment systems, security systems, and various network devices both residential and commercial."
 		},{
 		"dates" : "2007-2011",
 		"employer" : "Ford and Bryant LLC",
 		"location" : "Liverpool, NY",
 		"title" : "Assistant manager",
-		"description" : "Aid in selection and training of new hires, order merchanise for store, keep track of inventory"
+		"description" : "Aid in selection and training of new hires. Order merchanise for store. Keep track of inventory."
 		}
 	],
 
@@ -208,10 +207,8 @@ projects.display();
 education.display();
 $("#location").append(googleMap);
 
-
 //Create drop downs for mobile
 $(".nav-item").click(function(){
-
 
 	var mq = window.matchMedia("(max-width: 480px)");
 
