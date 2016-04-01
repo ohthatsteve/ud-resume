@@ -1,22 +1,23 @@
 var bio = {
 	"name" : "Steven Cooper",
     "role" : "web developer",
-    "welcomeMessage" : "Welcome to my resume",
-    "bioPic" : "images/bio-pic.jpg",
-    "skills" : ["HTML",
-    			"CSS",
-    			"Javascript",
-    			"Other things"],
     "contacts" : {
     	"location" : "Syracuse, NY",
 		"email" : "stevencoop89@gmail.com",
 		"mobile" : "315-481-4801",
 		"github" : "github.com/ohthatsteve"
     },
+    "welcomeMessage" : "Welcome to my resume",
+	"skills" : ["HTML",
+    			"CSS",
+    			"Javascript",
+    			"Other things"],
+    "biopic" : "images/bio-pic.jpg",
+
     "display" : function(){
 		var name = HTMLheaderName.replace("%data%",bio.name);
 		var role = HTMLheaderRole.replace("%data%",bio.role);
-		var bioPic = HTMLbioPic.replace("%data%",bio.bioPic);
+		var bioPic = HTMLbioPic.replace("%data%",bio.biopic);
 		$("#header").append(bioPic);
 		$("#header").prepend(role);
 		$("#header").prepend(name);
@@ -72,7 +73,7 @@ var work = {
 		"employer" : "Middle Ages Bar and Grill",
 		"location" : "Syracuse, NY",
 		"title" : "Sales Associate, Porter",
-		"description" : "Maintain a positive atmosphere while interacting with international travelers. Keep six retail locations well stocked throughout the day."
+		"description" : "Maintain a positive atmosphere while interacting with international travelers. Train new hires. Keep six retail locations well stocked throughout the day."
 	},{
 		"dates" : "2011-2014",
 		"employer" : "Smooth Waves AV",
@@ -140,19 +141,19 @@ var education = {
 	"schools":[
 	{
 		"name"  : "Solvay High School",
-		"dates" : "2003-2007",
+		"dates" : "2007",
        	"location" : "Solvay, NY",
        	"degree" : "Regents Diploma"
 	}],
 	"onlineCourses": [
 		{
 			"school" : "lynda.com",
-			"dates" : "2015-2016",
+			"dates" : "2016",
 			"url" : "www.lynda.com/",
 			"title" : ["Javascript essential training"]
 		},{
 			"school" : "Code Academy",
-			"dates" : "2015-2016",
+			"dates" : "2016",
 			"url" : "https://www.codecademy.com/",
 			"title" : ["HTML & CSS",
 						" JavaScript",
@@ -162,7 +163,7 @@ var education = {
 						" Learn AngularJS"]
 		},{
 			"school" : "Udacity",
-			"dates" : "2016-current",
+			"dates" : "2016",
 			"url" : "https://www.udacity.com/",
 			"title" : ["Front-End Web Developer Nanodegree (in progress)"]
 		}
