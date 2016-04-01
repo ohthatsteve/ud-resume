@@ -174,10 +174,6 @@ span{
   width: 100%;
 }
 
-#lets-connect {
-  text-align: center;
-}
-
 #map {
   display: block;
   height: 100%;
@@ -189,6 +185,10 @@ span{
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 5%;
+}
+
+#lets-connect {
+  text-align: center;
 }
 
 /*********COLORS***********/

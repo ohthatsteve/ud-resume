@@ -109,12 +109,10 @@ var projects = {
 			"title" : "Portfolio",
 			"dates" : "February 2016-current",
 			"description" : "Udacity portfolio project",
-			"image" : "#"
-		},{
-			"title" : "Galaxy Index",
-			"dates" : "November 2015-current",
-			"description" : "View information about various galaxies",
-			"image" : "#"
+			"images" : {
+				"mobile" : "images/project1-1.jpg",
+				"desktop" : "images/project1-2.jpg"
+				}
 		}
 	],
 	"display" : function(){
@@ -126,6 +124,10 @@ var projects = {
 					var dates = HTMLprojectDates.replace("%data%",projects.project[project].dates);
 					var description = HTMLprojectDescription.replace("%data%",projects.project[project].description);
 					$(".project-entry:last").append(title, dates, description);
+					for(image in projects.project[project].images){
+						var projectImage = HTMLprojectImage.replace("%data%",projects.project[project].images[image]);
+							$(".project-entry:last").append(projectImage);
+					}
 				}
 		}
 	}
@@ -186,8 +188,8 @@ var education = {
 					var onlineDates = HTMLonlineDates.replace("%data%",education.onlineCourses[course].dates);
 					var onlineTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
 					var onlineUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[course].url);
-				$("#education").append(HTMLschoolStart);
-				$(".education-entry:last").append(onlineTitle + onlineSchool,onlineDates,onlineUrl);
+					$("#education").append(HTMLschoolStart);
+					$(".education-entry:last").append(onlineTitle + onlineSchool,onlineDates,onlineUrl);
 
 				}
 			}
