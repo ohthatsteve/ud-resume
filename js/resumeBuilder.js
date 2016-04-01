@@ -207,7 +207,7 @@ projects.display();
 education.display();
 $("#location").append(googleMap);
 
-//Create drop downs for mobile
+//Create drop downs for mobile, javascript media query instructions from http://www.sitepoint.com/javascript-media-queries/
 $(".nav-item").click(function(){
 
 	var mq = window.matchMedia("(max-width: 480px)");
